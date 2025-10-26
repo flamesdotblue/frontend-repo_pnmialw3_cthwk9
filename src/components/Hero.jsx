@@ -10,14 +10,15 @@ const glowText = {
 
 export default function Hero() {
   return (
-    <section id="home" className="relative h-[90vh] md:h-screen w-full overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      {/* Spline 3D scene */}
+    <section id="home" className="relative h-[90vh] md:h-screen w-full overflow-hidden bg-slate-950">
+      {/* Spline full-width cover background */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/zhZFnwyOYLgqlLWk/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
-      {/* Soft gradient overlay for neon tint (non-blocking) */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(14,165,233,0.25),_transparent_60%)]" />
+      {/* Non-blocking gradient tints for neon feel */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(14,165,233,0.18),_transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950" />
 
       {/* Floating glow orbs */}
       <motion.div
@@ -58,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45 }}
-            className="mt-4 max-w-2xl text-lg text-slate-300"
+            className="mt-4 max-w-2xl text-lg text-slate-200"
           >
             I design and build modern, performant web apps with delightful user experiences and scalable cloud deployments.
           </motion.p>
@@ -92,13 +93,13 @@ export default function Hero() {
             transition={{ delay: 0.75 }}
             className="mt-8 flex items-center gap-5"
           >
-            <a href="mailto:sathyabama@example.com" className="text-slate-300 transition hover:text-white" aria-label="Email">
+            <a href="mailto:sathyabama@example.com" className="text-slate-200 transition hover:text-white" aria-label="Email">
               <Mail />
             </a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="text-slate-300 transition hover:text-white" aria-label="GitHub">
+            <a href="https://github.com/" target="_blank" rel="noreferrer" className="text-slate-200 transition hover:text-white" aria-label="GitHub">
               <Github />
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="text-slate-300 transition hover:text-white" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="text-slate-200 transition hover:text-white" aria-label="LinkedIn">
               <Linkedin />
             </a>
           </motion.div>
